@@ -32,14 +32,14 @@ function App() {
           </Canvas>
         </div>
 
-        <div className="prompt-card">
+        {/* <div className="prompt-card">
           <span>Describe a task or @ for more options</span>
           <div className="prompt-actions">
             <button type="button" className="context-chip">@ Context</button>
             <button type="button" aria-label="Voice input">⌕</button>
             <button type="button" aria-label="Submit">↑</button>
           </div>
-        </div>
+        </div> */}
 
         <span className="scroll-indicator" aria-hidden="true" />
       </section>
