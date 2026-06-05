@@ -1,0 +1,156 @@
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(80, 82, 108, 0.28), transparent 24rem),
+    radial-gradient(circle at 50% 50%, rgba(50, 52, 74, 0.2), transparent 30rem),
+    linear-gradient(180deg, #171821 0%, #090a10 75%, #03040a 100%);
+  color: #f5f2ef;
+  overflow: hidden;
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 1rem 2rem;
+  text-align: center;
+}
+
+.brand-mark {
+  display: block;
+  width: clamp(66px, 8vw, 86px);
+  height: auto;
+  margin: 0;
+}
+
+.hero-copy {
+  margin-top: clamp(3rem, 7vh, 4.7rem);
+  z-index: 2;
+}
+
+.hero-copy h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  color: #f6f1f0;
+  font-family: 'PP Mondwest', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.35rem, 4.15vw, 4.15rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+  text-shadow: 0 0 26px rgba(255, 255, 255, 0.12);
+}
+
+.hero-copy mark {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.03em 0.22em 0.08em;
+  background: #51cfff;
+  color: #05070c;
+  font-family: inherit;
+}
+
+.computer-stage {
+  width: min(54vw, 420px);
+  height: min(34vw, 290px);
+  min-width: 290px;
+  min-height: 230px;
+  margin-top: 0.9rem;
+  z-index: 1;
+  filter: drop-shadow(0 38px 34px rgba(0, 0, 0, 0.5));
+}
+
+.prompt-card {
+  display: flex;
+  width: min(92vw, 330px);
+  min-height: 58px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1.05rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  background: rgba(43, 43, 55, 0.92);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.75rem;
+  text-align: left;
+  z-index: 2;
+}
+
+.prompt-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.prompt-actions button {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.prompt-actions button:last-child {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.prompt-actions .context-chip {
+  width: auto;
+  height: 19px;
+  padding: 0 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.64rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.1rem;
+  left: 50%;
+  width: 8px;
+  height: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator::after {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 2px;
+  height: 3px;
+  border-radius: 999px;
+  background: #ffffff;
+  content: '';
+  transform: translateX(-50%);
+}
+
+@media (max-width: 680px) {
+  .hero-section {
+    padding-top: 1.2rem;
+  }
+
+  .hero-copy {
+    margin-top: 2.8rem;
+  }
+
+  .computer-stage {
+    width: 92vw;
+    height: 300px;
+    margin-top: 0.4rem;
+  }
+}
