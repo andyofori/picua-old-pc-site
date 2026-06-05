@@ -5,7 +5,7 @@ import './App.css'
 function OldComputerModel() {
   const { scene } = useGLTF('/models/picua_old-computer.glb')
 
-  return <primitive object={scene} scale={2.45} position={[0, -1.2, 0]} rotation={[0.08, -0.32, 0]} />
+  return <primitive object={scene} scale={5} position={[0, -5.5, 0]} rotation={[0.08, -0.32, 0]} />
 }
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <directionalLight position={[4, 5, 5]} intensity={2.8} />
             <directionalLight position={[-4, 2, 3]} intensity={1.2} />
             <OldComputerModel />
-            <Environment preset="city" />
+            {/* <Environment preset="city" /> */}
             <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.55} />
           </Canvas>
         </div>
