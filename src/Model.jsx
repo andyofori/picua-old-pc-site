@@ -14,11 +14,11 @@ export function Model(props) {
     video.autoplay = true
 
     const texture = new VideoTexture(video)
-texture.colorSpace = SRGBColorSpace
-texture.center.set(0.5, 0.5)
-texture.rotation = Math.PI
-texture.repeat.set(-1, 1)
-texture.offset.set(0, 0)
+    texture.colorSpace = SRGBColorSpace
+    texture.center.set(0.5, 0.5)
+    texture.rotation = Math.PI
+    texture.repeat.set(-1, 1)
+    texture.offset.set(0, 0)
 
     return texture
   }, [])
