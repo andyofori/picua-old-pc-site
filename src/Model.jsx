@@ -37,10 +37,9 @@ export function Model(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.SCREEN001.geometry}
-        position={[0, 1.174, -0.106]}
+        geometry={nodes.screen001.geometry}
+        position={[0, 1.173, -0.111]}
         rotation={[1.504, 0, 0]}
-        scale={0.17}
       >
         <meshBasicMaterial map={screenTexture} toneMapped={false} />
       </mesh>
@@ -49,35 +48,22 @@ export function Model(props) {
         receiveShadow
         geometry={nodes.monitor_base.geometry}
         material={materials['old-computer']}
-        position={[0, 1.076, -0.246]}
-        scale={0.266}
-      />
-      <group position={[0.275, 0.846, -0.254]} scale={0.319}>
+        position={[0, 0.927, -0.204]}
+        scale={0.232}
+      >
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Cube009.geometry}
-          material={materials['monitor-base']}
+          geometry={nodes.cables.geometry}
+          material={materials['old-computer']}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Cube009_1.geometry}
-          material={materials['pikua - emission']}
+          geometry={nodes.computer.geometry}
+          material={materials['old-computer']}
         />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube009_2.geometry}
-          material={materials.plug}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube009_3.geometry}
-          material={materials.cord}
-        />
-      </group>
+      </mesh>
     </group>
   )
 }
