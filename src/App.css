@@ -56,8 +56,8 @@
 .computer-stage {
   width: min(94vw, 840px);
   height: min(68vw, 580px);
-  min-width: 580px;
-  min-height: 460px;
+  min-width: 0;
+  min-height: 0;
   margin-top: 0.9rem;
   z-index: 1;
   filter: drop-shadow(0 38px 34px rgba(0, 0, 0, 0.5));
@@ -158,16 +158,25 @@
 
 @media (max-width: 680px) {
   .hero-section {
-    padding-top: 1.2rem;
+    padding: 1.2rem 1rem 5rem;
   }
 
   .hero-copy {
-    margin-top: 2.8rem;
+    margin-top: 1.6rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 10vw, 2.6rem);
   }
 
   .computer-stage {
-    width: 92vw;
-    height: 600px;
-    margin-top: 0.4rem;
+    width: 96vw;
+    height: 72vw;
+    margin-top: 0.2rem;
+  }
+
+  .prompt-card {
+    width: min(92vw, 300px);
+    margin-top: 0.8rem;
   }
 }
