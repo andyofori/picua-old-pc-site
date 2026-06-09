@@ -24,7 +24,7 @@ export function Model(props) {
   }, [])
 
   useEffect(() => {
-    screenTexture.image.play()
+    screenTexture.image.play ()
 
     return () => {
       screenTexture.image.pause()
