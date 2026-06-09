@@ -1,9 +1,11 @@
 import { useEffect, useMemo } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useThree } from '@react-three/fiber'
 import { SRGBColorSpace, VideoTexture } from 'three'
 
 export function Model(props) {
   const { nodes, materials } = useGLTF('/models/picua_old-computer.glb')
+  const { gl } = useThree()
   const screenTexture = useMemo(() => {
     const video = document.createElement('video')
     video.src = '/models/screen-video-windowsxp.mp4'
@@ -33,7 +35,12 @@ export function Model(props) {
   }, [screenTexture])
 
   return (
-    <group {...props} dispose={null}>
+    <group
+      {...props}
+      dispose={null}
+      onPointerOver={() => (gl.domElement.style.cursor = 'pointer')}
+      onPointerOut={() => (gl.domElement.style.cursor = 'auto')}
+    >
       <mesh
         castShadow
         receiveShadow
